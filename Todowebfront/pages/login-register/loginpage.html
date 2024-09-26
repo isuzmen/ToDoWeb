@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Giriş Yap</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"/>
+  <style>
+    html, body {
+      height: 100%;
+    }
+    body {
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;  
+      background-color: #C8A2C8; 
+    }
+    button, .btn-register {
+      background-color: #000080; 
+    }
+    button:hover, .btn-register:hover {
+      background-color: #4B0082; 
+    }
+  </style>
+</head>
+<body data-aos="fade-in">
+
+<div class="container mx-auto px-4 py-8" data-aos="fade-up">
+  <h1 class="text-3xl font-bold text-center mb-6 text-black">GİRİŞ EKRANI</h1>
+  <h3 class="text-black text-center">Hemen giriş yap veya hesap oluştur, not almaya başla.</h3>
+  <form id="loginForm" class="flex flex-col space-y-4">
+    <div class="flex flex-col">
+      <label for="email" class="text-black">E-posta:</label>
+      <input id="email" type="email" name="EmailAddress" placeholder="example@email.com"
+      class="bg-gray-800 border-white p-2 rounded focus:outline-none focus:ring-2 focus:ring-pink-500 text-white">
+    </div>
+    <div class="flex flex-col">
+      <label for="password" class="text-black">Şifre:</label>
+      <input id="password" type="password" name="PassWord" placeholder="••••••••" 
+      class="bg-gray-800 border-white p-2 rounded focus:outline-none focus:ring-2 focus:ring-pink-500 text-white">
+    </div>
+    <div class="flex justify-center space-x-4">
+      <button type="submit" class="text-white px-4 py-2 rounded"> Giriş Yap </button>
+      <a href="registerpage.html" class="btn-register text-white px-4 py-2 rounded"> Kayıt Ol </a>
+    </div>
+  </form>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+<script src="login.js"></script>
+</body>
+</html>

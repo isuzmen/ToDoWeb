@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">  
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+</head>
+<body class="animate-fade-in">
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a href="note.html" class="navbar-logo logo-link">My Notes</a>
+      <ul class="navbar-menu">
+        <li class="navbar-item"><a href="../calendar/index.html" class="navbar-link nav-link">Calendar</a></li>
+        <li class="navbar-item user-dropdown">
+          <a href="#" class="navbar-link">User</a>
+          <ul class="dropdown-menu">
+            <li><a href="../profile/profile.html" class="nav-link">Profile</a></li>
+            <li><a href="../login-register/loginpage.html" class="nav-link">Log out</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="popup-box">
+    <div class="popup">
+      <div class="content">
+        <header>
+          <p></p>
+          <i class="uil uil-times"></i>
+        </header>
+        <form action="#">
+          <div class="row title">
+            <label>Title</label>
+            <input type="text" spellcheck="false" required>
+          </div>
+          <div class="row description">
+            <label>Description</label>
+            <textarea spellcheck="false" required></textarea>
+          </div>
+          <div class="row priority">
+            <label>Priority</label>
+            <input type="number" min="0" max="5" step="1" required>
+          </div>
+          <button type="submit">Create Note</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="wrapper">
+    <li class="add-box">
+      <div class="icon"><i class="uil uil-plus"></i></div>
+      <p>Add new note</p>
+    </li>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+  <script src="../../APIService/getnote.js"></script>
+  <script src="../../APIService/notecreate.js"></script>
+  <script src="../../APIService/noteupdate.js"></script>
+  <script src="../../APIService/notedelete.js"></script>
+  <script src="../../APIService/opennote.js"></script>
+  <script src="notescript.js"></script>
+  <script>
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', function(event) {
+        event.preventDefault();
+        document.body.classList.add('animate-fade-out');
+        setTimeout(() => {
+          window.location.href = this.href;
+        }, 500);
+      });
+    });
+
+    document.querySelectorAll('.logo-link').forEach(link => {
+      link.addEventListener('click', function(event) {
+        event.preventDefault();
+        document.body.classList.add('animate-slide-out');
+        setTimeout(() => {
+          window.location.href = this.href;
+        }, 500);
+      });
+    });
+  </script>
+</body>
+</html>

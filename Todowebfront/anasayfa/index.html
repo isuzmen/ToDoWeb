@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ana Sayfa</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="./index.html"><img src="icons8-note-48.png" alt="noteLogo"></a>
+        <h1>TODO TADAA!</h1>
+      </div>
+      <div class="auth-buttons">
+        <button class="login-button">Giriş Yap</button>
+        <button class="register-button">Kayıt Ol</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <article id="main-content">
+      <section class="welcome-section">
+        <h2>Hoş Geldiniz!</h2>
+        <p>Siteye hoş geldiniz. Notlarınızı almak ve organize etmek için hemen başlayın!</p>
+        <button class="start-button">Buradan Başla</button>
+      </section>
+      <div class="sections-container">
+        <section class="about-section">
+          <h2>Site Hakkında</h2>
+          <p>Bu site, not alma, yapılacaklar listesi tutma ve takvim özelliklerini bir araya getiren bir platformdur. 
+              Kullanıcılar, notlarını kolayca oluşturabilir, düzenleyebilir ve takvim özelliği ile önemli tarihleri planlayabilirler.</p>
+        </section>
+        <section class="motivation-section">
+          <h2>Motivasyon</h2>
+          <blockquote id="quote">
+            <p id="quote-text">"Kararlılık, disiplin ve sıkı çalışmayla tüm hayaller gerçeğe dönüşür."</p>
+            <p id="quote-author">— Lailah Gifty Akita</p>
+          </blockquote>
+        </section>
+      </div>
+    </article>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Ana Sayfa</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
